@@ -20,14 +20,15 @@ async function getCovidData() {
         document.getElementById("critical").innerHTML = "Critical: " +data_json.critical;
         document.getElementById("death").innerHTML = "Death: " +data_json.deaths;
       }
+      //catch countries that do not exist
       catch (SyntaxError) {
         console.log("Syntax Error!!");
         document.getElementById("cases").innerHTML = "Country Not Found\n" ;
         document.getElementById("critical").innerHTML = "";
         document.getElementById("death").innerHTML = "";
       }
-        
-    
-
+  }
+  else{
+    console.log(response.status);
   }
 }
