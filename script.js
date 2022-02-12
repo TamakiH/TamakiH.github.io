@@ -16,9 +16,6 @@ async function getCovidData() {
         const data_json = JSON.parse(result);
         console.log(data_json);
         console.log(typeof(data_json));
-        document.getElementById("cases").innerHTML = "Cases: " +data_json.confirmed;
-        document.getElementById("critical").innerHTML = "Critical: " +data_json.critical;
-        document.getElementById("death").innerHTML = "Death: " +data_json.deaths;
         graph(data_json.confirmed, data_json.recovered, data_json.critical, data_json.deaths);
       }
       //catch countries that do not exist
@@ -41,7 +38,7 @@ function graph(confirmed, recovered, critical, deaths){
       data: {
           labels: ["confirmed", "recovered", "critical", "deaths"],
           datasets: [{
-              label: ["Confirmed”, “Recovered”, “Critical”, “Deaths"],
+              label: ["Cases"],
               data: [confirmed, recovered, critical, deaths],
               backgroundColor: [
                   'rgba(255, 206, 86, 0.2)',

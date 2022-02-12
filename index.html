@@ -54,10 +54,7 @@
             <a class="nav-link active" aria-current="page" href="#">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            <a class="nav-link" href="https://github.com/TamakiH/TamakiH.github.io">GitHub</a>
           </li>
         </ul>
         <form class="d-flex">
@@ -124,16 +121,24 @@
 
 
 
+<h3>Covid Cases</h3>
+
+
 
   <div class="input-group mb-3">
     <input type="text" id="countryName" class="col-6" placeholder="Country name" aria-label="Country name" aria-describedby="button-addon2">
     <button class="btn btn-outline-secondary" type="button" id="button-addon2" onclick="getCovidData()">Search</button>
   </div>
-<h1 id="cases">Cases: </h1>
-<h1 id="critical">Critical: </h1>
-<h1 id="death">Death: </h1>
 
-<canvas id="myChart" width="400" height="400"></canvas>
+
+
+<!-- <div class="chart-container" style="position:relative; height:40vh; width:80vh">
+  <canvas id="myChart"></canvas>
+</div> -->
+
+<div style="position:responsive; padding-bottom: 3rem; margin-left:7rem; width:1000px; height:500px;">
+  <canvas id="myChart"></canvas>
+</div>
 
 
 
